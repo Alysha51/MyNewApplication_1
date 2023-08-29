@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="loginButton" type="id" />
+    <item name="helloEditText" type="id" />
+    <item name="categoryGrid" type="id" />
+    <item name="pageViewOption" type="id" />
+    <item name="notificationIcon" type="id" />
+    <item name="nameTextView" type="id" />
+    <item name="listViewItems" type="id" />
+    <item name="listView" type="id" />
+</resources>

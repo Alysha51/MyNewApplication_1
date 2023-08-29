@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <!-- Permission for setting alarms -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+
+    <application
+        android:allowBackup="true"
+        android:name=".MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyNewApplication" >
+
+
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="Registration" />
+        <activity
+            android:name=".CategoryActivity"
+            android:label="Category Page" />
+        <activity
+            android:name=".PageActivity"
+            android:label="Page Activity" />
+        <activity
+            android:name=".ItemAdapter" />
+        <activity
+            android:name=".ListViewActivity"
+            android:label="list View Page" />
+
+        <activity
+            android:name=".UpdateActivity"
+            android:label="Update Category" />
+        <activity
+            android:name=".CategorySelectorActivity"
+            android:label="Update Category" />
+        <activity
+            android:name=".DeleteActivity"
+            android:label="Delete Category" />
+        <activity
+            android:name=".AddActivity"
+            android:label="Add Category" />
+        <activity
+            android:name=".EditActivity"
+            android:label="Edit Category" />
+        <activity
+            android:name=".NotificationActivity"
+            android:label="Notification Category" />
+        <activity
+            android:name=".UploadImageActivity"
+            android:label="UploadImage Category" />
+        <!-- Add other activities for Delete, Edit, Upload Image, and Add categories -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyFirbaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/material_dynamic_primary0" />
+    </application>
+
+</manifest>

@@ -1,0 +1,177 @@
+<!-- activity_main.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/electric_blue">
+
+        <!-- Toggle Option: Page View -->
+        <TextView
+            android:id="@+id/listViewOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="List View"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:clickable="true"/>
+
+        <!-- Toggle Option: List View -->
+        <TextView
+            android:id="@+id/pageViewOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <!-- Banner Image -->
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/image_banner"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/navBarLayout"/>
+
+    <!-- Small Image with Text Beside It -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/bannerImage"
+        android:layout_marginTop="10dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/smallImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/person_image"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/smallImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/smallImage"
+            android:layout_marginStart="16dp"
+            android:text="Subject Line"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="40dp"
+            android:text="Description, Description"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="60dp"
+            android:text="Description, Description"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <!-- Small Image with Text Beside It -->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_below="@id/bannerImage"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:padding="16dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/smallImage1"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/person_image"-->
+<!--            android:scaleType="centerCrop"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/smallImageText1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@id/smallImage1"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:text="Subject Line"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@android:color/black"/>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="110dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:text="Description, Description"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="110dp"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:text="Description, Description"-->
+<!--            android:textSize="16sp" />-->
+
+<!--    </RelativeLayout>-->
+
+    <!-- Social Icons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smallImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/instagram"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_facebook"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/twitter"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/tiktok"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategorySelectorActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/navBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/electric_blue">
+
+    <!-- Toggle Option: Page View -->
+
+
+        <!-- Dropdown Menu -->
+        <TextView
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingTop="16dp"
+            android:text="HELLO"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/pageViewOption"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="-40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_notifications"
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+        android:id="@+id/dropdownButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_dropdown"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/dropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignEnd="@id/dropdownButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/option24Hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 Hours"
+            android:padding="8dp"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/optionDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily"
+            android:padding="8dp"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/optionWeekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly"
+            android:padding="8dp"
+            android:clickable="true"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/navBarLayout"/>
+
+    <!-- ... -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/selectAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:layout_below="@id/viewPager"
+            android:text="Select All" />
+
+        <Button
+            android:id="@+id/listViewOption"
+            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:text="Select" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/categoryGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="5dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="16dp" />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/listViewOption"-->
+<!--        android:layout_width="146dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:clickable="true"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="650dp"-->
+<!--        android:layout_marginLeft="110dp"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="VIEW MORE"-->
+<!--        android:textColor="@android:color/black" />-->
+
+
+</RelativeLayout>
