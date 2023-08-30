@@ -33,7 +33,7 @@ class CategorySelectorActivity : AppCompatActivity(), CategorySelectionListener 
     private val bannerImage: ImageView? = null
     private var dropdownButton: ImageButton? = null
     private var dropdownMenu: LinearLayout? = null
-    private var option24Hours: TextView? = null
+    private var option6Hours: TextView? = null
     private var optionDaily: TextView? = null
     private var optionWeekly: TextView? = null
 
@@ -45,7 +45,7 @@ class CategorySelectorActivity : AppCompatActivity(), CategorySelectionListener 
         pageViewOption = findViewById(R.id.pageViewOption)
         dropdownButton = findViewById(R.id.dropdownButton)
         dropdownMenu = findViewById(R.id.dropdownMenu)
-        option24Hours = findViewById(R.id.option24Hours)
+        option6Hours = findViewById(R.id.option6Hours)
         optionDaily = findViewById(R.id.optionDaily)
         optionWeekly = findViewById(R.id.optionWeekly)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
@@ -58,7 +58,7 @@ class CategorySelectorActivity : AppCompatActivity(), CategorySelectionListener 
                 dropdownMenu!!.setVisibility(View.VISIBLE)
             }
         })
-        option24Hours!!.setOnClickListener(View.OnClickListener { // Handle 24 Hours option selection
+        option6Hours!!.setOnClickListener(View.OnClickListener { // Handle 24 Hours option selection
             dropdownMenu!!.setVisibility(View.GONE)
             ModelPreferencesManager.put(6,"notification_time")
 
