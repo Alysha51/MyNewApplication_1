@@ -28,6 +28,21 @@ object ModelPreferencesManager {
             PREFERENCES_FILE_NAME, Context.MODE_PRIVATE)
     }
 
+    fun saveInt(key : String, value : Int) {
+        preferences.edit().putInt(key, value).apply()
+    }
+
+    fun getInt(key : String) : Int {
+        return preferences.getInt(key, 0)
+    }
+    fun saveLong(key : String, value : Long) {
+        preferences.edit().putLong(key, value).apply()
+    }
+
+    fun getLong(key : String) : Long {
+        return preferences.getLong(key, 0)
+    }
+
     /**
      * Saves object into the Preferences.
      *

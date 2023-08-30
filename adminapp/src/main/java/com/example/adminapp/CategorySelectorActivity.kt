@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import androidx.viewpager.widget.ViewPager
+import com.example.adminapp.ModelPreferencesManager.get
 import com.example.adminapp.ModelPreferencesManager.put
 import com.example.adminapp.interfaces.CategorySelectionListener
 import com.google.firebase.messaging.FirebaseMessaging
@@ -35,6 +36,7 @@ class CategorySelectorActivity : AppCompatActivity(), CategorySelectionListener 
     private var option24Hours: TextView? = null
     private var optionDaily: TextView? = null
     private var optionWeekly: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_selector)
@@ -58,13 +60,21 @@ class CategorySelectorActivity : AppCompatActivity(), CategorySelectionListener 
         })
         option24Hours!!.setOnClickListener(View.OnClickListener { // Handle 24 Hours option selection
             dropdownMenu!!.setVisibility(View.GONE)
+            ModelPreferencesManager.put(6,"notification_time")
+
         })
         optionDaily!!.setOnClickListener(View.OnClickListener { // Handle Daily option selection
             dropdownMenu!!.setVisibility(View.GONE)
+            ModelPreferencesManager.put(24,"notification_time")
         })
         optionWeekly!!.setOnClickListener(View.OnClickListener { // Handle Weekly option selection
             dropdownMenu!!.setVisibility(View.GONE)
+            ModelPreferencesManager.put(168,"notification_time")
         })
+
+
+
+
         showPageView()
         dropdownButton!!.setOnClickListener(View.OnClickListener { v -> showPopupMenu(v) })
         categories = ArrayList()

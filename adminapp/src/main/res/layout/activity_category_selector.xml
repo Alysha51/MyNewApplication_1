@@ -67,7 +67,7 @@
             android:id="@+id/option24Hours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="24 Hours"
+            android:text="6 Hours"
             android:padding="8dp"
             android:clickable="true"/>
 
@@ -75,7 +75,7 @@
             android:id="@+id/optionDaily"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daily"
+            android:text="24 Hours"
             android:padding="8dp"
             android:clickable="true"/>
 
@@ -130,20 +130,6 @@
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
         android:verticalSpacing="16dp" />
-
-
-<!--    <TextView-->
-<!--        android:id="@+id/listViewOption"-->
-<!--        android:layout_width="146dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_weight="1"-->
-<!--        android:clickable="true"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="650dp"-->
-<!--        android:layout_marginLeft="110dp"-->
-<!--        android:padding="16dp"-->
-<!--        android:text="VIEW MORE"-->
-<!--        android:textColor="@android:color/black" />-->
 
 
 </RelativeLayout>
